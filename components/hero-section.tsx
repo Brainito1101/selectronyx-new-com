@@ -1,10 +1,22 @@
 "use client"
 
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { LeadFormEmbed } from "@/components/lead-form-embed"
 
-export function HeroSection() {
+interface HeroSectionProps {
+  onGetStartedClick?: () => void
+  formSubmitted?: boolean
+  onFormSubmit?: () => void
+}
+
+export function HeroSection({ onGetStartedClick, formSubmitted, onFormSubmit }: HeroSectionProps) {
+  const handleClick = () => {
+    if (formSubmitted) {
+      window.open("https://app.selectronyx.com/", "_blank", "noopener,noreferrer")
+    } else {
+      onGetStartedClick?.()
+    }
+  }
   return (
     <section className="bg-accent">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
@@ -42,10 +54,8 @@ export function HeroSection() {
             </div>
 
             <div>
-              <Link
-                href="https://app.selectronyx.com/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={handleClick}
                 className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2.5 text-xs font-semibold text-primary-foreground transition-all hover:opacity-90 hover:shadow-lg sm:gap-2 sm:px-6 sm:py-2.5 sm:text-sm"
                 style={{
                   backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
@@ -53,7 +63,7 @@ export function HeroSection() {
               >
                 Get Started Free
                 <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-              </Link>
+              </button>
             </div>
 
             {/* Stats */}
@@ -80,7 +90,7 @@ export function HeroSection() {
           {/* Right Form - Embedded */}
           <div className="w-full max-w-sm lg:w-[380px]">
             <div className="overflow-hidden rounded-xl border border-border bg-background shadow-lg">
-              <LeadFormEmbed className="h-[500px] w-full" id="hero" />
+              <LeadFormEmbed className="h-[500px] w-full" id="hero" onFormSubmit={onFormSubmit} />
             </div>
           </div>
         </div>

@@ -2,7 +2,11 @@
 
 import { LeadFormEmbed } from "@/components/lead-form-embed"
 
-export function CtaSection() {
+interface CtaSectionProps {
+  onFormSubmit?: () => void
+}
+
+export function CtaSection({ onFormSubmit }: CtaSectionProps) {
   return (
     <section className="bg-background py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -24,7 +28,7 @@ export function CtaSection() {
         <div className="mx-auto mt-10 max-w-lg sm:mt-12">
           <div className="rounded-2xl border border-border bg-secondary/50 p-4 shadow-sm sm:p-6">
             <div className="overflow-hidden rounded-xl border border-border bg-background">
-              <LeadFormEmbed className="h-[500px] w-full" id="cta" />
+              <LeadFormEmbed className="h-[500px] w-full" id="cta" onFormSubmit={onFormSubmit} />
             </div>
           </div>
         </div>

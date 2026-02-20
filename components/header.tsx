@@ -1,7 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export function Header() {
+interface HeaderProps {
+  onLoginClick?: () => void
+  formSubmitted?: boolean
+}
+
+export function Header({ onLoginClick, formSubmitted }: HeaderProps) {
+  const handleClick = () => {
+    if (formSubmitted) {
+      window.open("https://app.selectronyx.com/", "_blank", "noopener,noreferrer")
+    } else {
+      onLoginClick?.()
+    }
+  }
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
@@ -15,17 +27,15 @@ export function Header() {
             priority
           />
         </Link>
-        <Link
-          href="https://app.selectronyx.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={handleClick}
           className="shrink-0 rounded-md px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-all hover:opacity-90 hover:shadow-md sm:rounded-lg sm:px-5 sm:py-2 sm:text-sm"
           style={{
             backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
           }}
         >
           Login to App
-        </Link>
+        </button>
       </div>
     </header>
   )

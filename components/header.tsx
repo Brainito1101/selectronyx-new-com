@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 
@@ -27,15 +29,23 @@ export function Header({ onLoginClick, formSubmitted }: HeaderProps) {
             priority
           />
         </Link>
-        <button
-          onClick={handleClick}
-          className="shrink-0 rounded-md px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-all hover:opacity-90 hover:shadow-md sm:rounded-lg sm:px-5 sm:py-2 sm:text-sm"
-          style={{
-            backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
-          }}
-        >
-          Login to App
-        </button>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <Link
+            href="/blog"
+            className="shrink-0 rounded-md border border-primary px-3 py-1.5 text-xs font-semibold text-primary transition-all hover:bg-primary/5 sm:rounded-lg sm:px-5 sm:py-2 sm:text-sm"
+          >
+            Blog
+          </Link>
+          <button
+            onClick={handleClick}
+            className="shrink-0 rounded-md px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-all hover:opacity-90 hover:shadow-md sm:rounded-lg sm:px-5 sm:py-2 sm:text-sm"
+            style={{
+              backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
+            }}
+          >
+            Login to App
+          </button>
+        </div>
       </div>
     </header>
   )

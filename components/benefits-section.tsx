@@ -38,7 +38,7 @@ const audiences = [
 
 export function BenefitsSection() {
   return (
-    <section className="bg-secondary py-16 sm:py-20 lg:py-24">
+    <section className="bg-background py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-start gap-12 lg:grid-cols-2">
           {/* Left Content */}

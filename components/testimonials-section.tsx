@@ -1,24 +1,26 @@
+import Image from "next/image"
+
 const testimonials = [
   {
     quote:
       "Selectronyx gave us a defensible structure for hardware evaluation. We're no longer relying on fragmented vendor claims.",
     name: "Head of Strategic Procurement",
     role: "Global Technology Firm",
-    initials: "SP",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face",
   },
   {
     quote:
       "FairSpec helped us align sourcing decisions with ESG accountability in a way our board understands.",
     name: "Director of Sustainability",
     role: "Enterprise Organization",
-    initials: "DS",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
   },
   {
     quote:
       "The scoring clarity reduced internal debate and accelerated approvals.",
     name: "IT Procurement Lead",
     role: "",
-    initials: "IP",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
   },
 ]
 
@@ -47,13 +49,17 @@ export function TestimonialsSection() {
               >
                 {"\u201C\u201C"}
               </span>
-              <p className="mt-2 flex-1 text-sm italic leading-relaxed text-foreground sm:text-base">
+              <p className="mt-2 flex-1 text-sm font-light leading-relaxed text-foreground sm:text-base">
                 {`"${item.quote}"`}
               </p>
               <div className="mt-5 flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-xs font-bold text-muted-foreground">
-                  {item.initials}
-                </div>
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 shrink-0 rounded-full object-cover"
+                />
                 <div>
                   <p className="text-sm font-semibold text-foreground">
                     {item.name}

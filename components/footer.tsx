@@ -6,9 +6,9 @@ export function Footer() {
     <footer className="bg-[#0F172A]">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="flex flex-col gap-10 lg:flex-row lg:gap-16">
+        <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
           {/* Left Section - Logo & Description */}
-          <div className="flex flex-col gap-5 lg:max-w-lg lg:flex-1">
+          <div className="flex flex-col gap-5 lg:max-w-sm">
             <Link href="/" className="flex shrink-0 items-center">
               <Image
                 src="/images/logo-footer.png"
@@ -44,7 +44,7 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Social Media Section */}
+          {/* Right Section - Social */}
           <div className="flex flex-col gap-4">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
               Follow Us
@@ -97,6 +97,7 @@ export function Footer() {
             >
               {"Terms & Conditions"}
             </Link>
+
           </div>
         </div>
       </div>

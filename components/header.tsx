@@ -3,18 +3,11 @@
 import Image from "next/image"
 import Link from "next/link"
 
-interface HeaderProps {
-  onLoginClick?: () => void
-  formSubmitted?: boolean
-}
 
-export function Header({ onLoginClick, formSubmitted }: HeaderProps) {
+
+export function Header() {
   const handleClick = () => {
-    if (formSubmitted) {
-      window.open("https://app.selectronyx.com/", "_blank", "noopener,noreferrer")
-    } else {
-      onLoginClick?.()
-    }
+    window.location.href = "https://app.selectronyx.com/auth/signin"
   }
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background">

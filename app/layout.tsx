@@ -9,6 +9,9 @@ const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat
 export const metadata: Metadata = {
   title: 'Selectronyx - Transform Your BOM Analysis with AI',
   description: 'Ensure compliance, optimize costs, and improve sustainability across your entire bill of materials with our comprehensive FairSpec rating system.',
+  verification: {
+    google: '5aa6zbaKw-Sb12RbOJYUNMJvo_wqt1GfRwA6wZMbnLk',
+  },
   icons: {
     icon: [
       { url: '/favicons/favicon.ico' },

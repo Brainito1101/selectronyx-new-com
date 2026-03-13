@@ -16,7 +16,7 @@ export function HowItWorksSection() {
             <span className="text-primary">in 3 Simple Steps</span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Our proprietary FairSpec engine does the heavy lifting — providing
+            Our proprietary FairSpec engine does the heavy lifting providing
             audit-ready documentation in minutes.
           </p>
         </div>
@@ -99,7 +99,7 @@ export function HowItWorksSection() {
                   </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base mb-8">
                     Comprehensive assessment across our four core pillars of
-                    ethical hardware evaluation — scored, weighted, and benchmarked
+                    ethical hardware evaluation scored, weighted, and benchmarked
                     against global ESG standards.
                   </p>
 
@@ -155,13 +155,13 @@ export function HowItWorksSection() {
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base mb-6">
               Receive a unified hardware score and audit-ready documentation to
-              simplify internal stakeholder approvals — with full historical
+              simplify internal stakeholder approvals with full historical
               tracking for every BOM analysis.
             </p>
             <ul className="space-y-3">
               {[
                 "FairSpec score per component, clearly explained",
-                "Audit-ready documentation — exportable as PDF",
+                "Audit-ready documentation exportable as PDF",
                 "Historical BOM analysis stored and searchable",
               ].map((point) => (
                 <li

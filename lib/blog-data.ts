@@ -267,7 +267,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Replaceability hides risk.",
           "Repairability reveals intelligence.",
-          "Organizations that evaluate hardware beyond price make decisions that last longer \u2014 financially, operationally, and ethically.",
+          "Organizations that evaluate hardware beyond price make decisions that last longer financially, operationally, and ethically.",
         ],
       },
     ],

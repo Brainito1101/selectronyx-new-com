@@ -19,7 +19,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed text-[#94A3B8]">
-              {"Selectronyx App \u2014 An Ethical Electronics Compliance, Sustainability & Risk Management Tool."}
+              {"Selectronyx App An Ethical Electronics Compliance, Sustainability & Risk Management Tool."}
             </p>
           </div>
 

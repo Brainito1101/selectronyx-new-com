@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { CheckCircle2 } from "lucide-react"
+import { CheckCircle2, ShieldCheck, Leaf, Zap, ScanSearch } from "lucide-react"
 
 export function HowItWorksSection() {
   return (
@@ -105,16 +105,18 @@ export function HowItWorksSection() {
 
                   <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                     {[
-                      { emoji: "⚖️", label: "Integrity" },
-                      { emoji: "🌿", label: "Sustainability" },
-                      { emoji: "⚡", label: "Performance" },
-                      { emoji: "🔍", label: "Lifecycle Transparency" },
+                      { Icon: ShieldCheck, label: "Integrity" },
+                      { Icon: Leaf, label: "Sustainability" },
+                      { Icon: Zap, label: "Performance" },
+                      { Icon: ScanSearch, label: "Lifecycle Transparency" },
                     ].map((pillar) => (
                       <div
                         key={pillar.label}
                         className="rounded-xl border border-primary/20 bg-background/80 backdrop-blur p-4 text-center transition-all hover:shadow-md hover:border-primary/40"
                       >
-                        <div className="text-2xl mb-2">{pillar.emoji}</div>
+                        <div className="mb-2 flex justify-center">
+                          <pillar.Icon className="h-6 w-6 text-primary" />
+                        </div>
                         <p className="text-xs font-semibold text-foreground leading-snug">
                           {pillar.label}
                         </p>

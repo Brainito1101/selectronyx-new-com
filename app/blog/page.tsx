@@ -29,7 +29,7 @@ export default function BlogPage() {
           </div>
 
           {/* Blog Cards */}
-          <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="flex">
                 <article className="group flex flex-1 cursor-pointer flex-col overflow-hidden rounded-xl border border-border bg-background transition-all hover:border-primary hover:shadow-lg">

@@ -48,7 +48,7 @@ export function HeroSection({ onGetStartedClick, formSubmitted, onFormSubmit, sh
                 </span>
               </h1>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">
-                Ensure compliance, optimize costs, and improve sustainability
+                Ensure compliance, optimize costs and improve sustainability
                 across your entire bill of materials with our comprehensive
                 FairSpec rating system.
               </p>

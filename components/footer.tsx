@@ -1,4 +1,4 @@
-import Image from "next/image"
+  import Image from "next/image"
 import Link from "next/link"
 
 export function Footer() {
@@ -19,7 +19,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed text-[#94A3B8]">
-              {"Selectronyx App An Ethical Electronics Compliance, Sustainability & Risk Management Tool."}
+              Automate BOM Risk, Compliance, and Lifecycle Scoring with Enterprise-Grade Intelligence.
             </p>
           </div>
 
@@ -79,10 +79,26 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-[#1E293B]">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-3 px-4 py-5 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
-          <p className="text-xs text-[#94A3B8]">
-            &copy; 2026 Selectronyx. All rights reserved.
-          </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-6 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4">
+            <div className="shrink-0">
+              <Image
+                src="https://res.cloudinary.com/dspez5cnn/image/upload/v1774874464/Group_755_jvqocz.png"
+                alt="Trust Badge"
+                width={48}
+                height={48}
+                className="h-10 w-10 sm:h-12 sm:w-12"
+              />
+            </div>
+            <div className="flex flex-col gap-1 sm:gap-1.5">
+              <p className="text-xs text-[#94A3B8]">
+                &copy; 2026 Selectronyx. All rights reserved.
+              </p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-[#475569]">
+                GDPR Compliant | Secure Cloud Infrastructure
+              </p>
+            </div>
+          </div>
           <div className="flex items-center gap-4">
             <Link
               href="/privacy-policy"
@@ -97,7 +113,6 @@ export function Footer() {
             >
               {"Terms & Conditions"}
             </Link>
-
           </div>
         </div>
       </div>

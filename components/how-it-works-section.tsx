@@ -12,8 +12,7 @@ export function HowItWorksSection() {
             How It Works
           </div>
           <h2 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl leading-tight">
-            Ethical Hardware Intelligence{" "}
-            <span className="text-primary">in 3 Simple Steps</span>
+            The FairSpec Analysis <span className="text-primary">Workflow</span>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
             Our proprietary FairSpec engine does the heavy lifting providing
@@ -36,7 +35,7 @@ export function HowItWorksSection() {
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base mb-6">
               Submit hardware categories or upload your Bill of Materials (BOM)
-              for immediate evaluation against global regulatory benchmarks.
+              to instantly cross-reference millions of authorized components against live EU, UK, and US compliance databases.
             </p>
             <ul className="space-y-3">
               {[
@@ -99,16 +98,16 @@ export function HowItWorksSection() {
                   </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground sm:text-base mb-8">
                     Comprehensive assessment across our four core pillars of
-                    ethical hardware evaluation scored, weighted, and benchmarked
+                    automated hardware scoring, weighted and benchmarked
                     against global ESG standards.
                   </p>
 
                   <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                     {[
-                      { Icon: ShieldCheck, label: "Integrity" },
-                      { Icon: Leaf, label: "Sustainability" },
-                      { Icon: Zap, label: "Performance" },
-                      { Icon: ScanSearch, label: "Lifecycle Transparency" },
+                      { Icon: ShieldCheck, label: "Repairability" },
+                      { Icon: Leaf, label: "Reliability" },
+                      { Icon: Zap, label: "Sustainability" },
+                      { Icon: ScanSearch, label: "Total Cost of Ownership (TCO)" },
                     ].map((pillar) => (
                       <div
                         key={pillar.label}

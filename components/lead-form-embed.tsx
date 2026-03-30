@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState, useCallback } from "react"
+import Script from "next/script"
 
 interface LeadFormEmbedProps {
   className?: string
@@ -14,19 +15,6 @@ export function LeadFormEmbed({ className = "", id = "default", onFormSubmit }: 
 
   const resetForm = useCallback(() => {
     setIframeKey((prev) => prev + 1)
-  }, [])
-
-  useEffect(() => {
-    // Load the form embed script once
-    const existingScript = document.querySelector(
-      'script[src="https://links.selectronyx.com/js/form_embed.js"]'
-    )
-    if (!existingScript) {
-      const script = document.createElement("script")
-      script.src = "https://links.selectronyx.com/js/form_embed.js"
-      script.async = true
-      document.body.appendChild(script)
-    }
   }, [])
 
   useEffect(() => {
@@ -94,6 +82,10 @@ export function LeadFormEmbed({ className = "", id = "default", onFormSubmit }: 
 
   return (
     <div className={className}>
+      <Script
+        src="https://links.selectronyx.com/js/form_embed.js"
+        strategy="lazyOnload"
+      />
       <iframe
         key={iframeKey}
         ref={iframeRef}
@@ -107,11 +99,12 @@ export function LeadFormEmbed({ className = "", id = "default", onFormSubmit }: 
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="Lead form.EU"
+        data-form-name="Lead form.EU/.com"
         data-height="491"
         data-layout-iframe-id="inline-pgQrSjvMA1nGXdFEg4KS"
         data-form-id="pgQrSjvMA1nGXdFEg4KS"
-        title="Lead form.EU"
+        title="Lead form.EU/.com"
+        loading="lazy"
       />
     </div>
   )

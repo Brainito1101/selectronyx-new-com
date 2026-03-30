@@ -14,6 +14,8 @@ import { Footer } from "@/components/footer"
 import { LoginFormPopup } from "@/components/login-form-popup"
 import { ThankYouPopup } from "@/components/thank-you-popup"
 
+import { RegulatoryCoverageSection } from "@/components/regulatory-coverage-section"
+
 export default function Home() {
   const [showFormAlert, setShowFormAlert] = useState(false)
   const [showLoginForm, setShowLoginForm] = useState(false)
@@ -56,13 +58,14 @@ export default function Home() {
           showFormAlert={showFormAlert}
         />
         <FeaturesSection />
+        <RegulatoryCoverageSection />
         <HowItWorksSection />
         <BenefitsSection />
         <CaseStudiesSection />
         <TestimonialsSection />
         <FaqSection />
         <CtaBannerSection
-          onRequestDemo={handleLoginClick}
+          onCreateAccount={handleLoginClick}
           onTrySampleData={() => {
             window.open("https://app.selectronyx.com/", "_blank", "noopener,noreferrer")
           }}

@@ -5,7 +5,7 @@ const features = [
     icon: Shield,
     title: "Compliance Assurance",
     description:
-      "Ensure RoHS, REACH, TSCA, and Prop65 compliance across all components",
+      "Automated RoHS, REACH, SCIP (EU) and TSCA, Prop 65, UFLPA (NA) tracking.",
   },
   {
     icon: TrendingUp,
@@ -29,7 +29,7 @@ const features = [
     icon: Globe,
     title: "Multi-Market Support",
     description:
-      "Analyze compliance for EU, US, UK, and other global markets",
+      "Unified compliance intelligence for EU, North America, UK, and global markets",
   },
   {
     icon: FileText,
@@ -49,7 +49,7 @@ export function FeaturesSection() {
             Features
           </span>
           <h2 className="mt-4 text-2xl font-bold text-foreground sm:text-3xl">
-            Everything You Need for BOM Excellence
+            Enterprise-Grade BOM Intelligence
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
             Comprehensive tools to analyze, monitor, and optimize your bill of

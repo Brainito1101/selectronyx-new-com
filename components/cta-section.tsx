@@ -16,11 +16,10 @@ export function CtaSection({ onFormSubmit }: CtaSectionProps) {
             Get Started
           </span>
           <h2 className="mt-4 text-2xl font-bold text-foreground sm:text-3xl">
-            Ready to Transform Your BOM Analysis?
+            Ready to Automate Your BOM Risk and Compliance?
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Fill out the form below and our team will get back to you within 24
-            hours
+            Create your account below to analyze your first BOM in minutes.
           </p>
         </div>
 

@@ -44,7 +44,7 @@ export function LoginFormPopup({ isOpen, onClose, onFormSubmit }: LoginFormPopup
 
         <div className="shrink-0 px-4 pt-5">
           <h3 className="text-center text-base font-bold text-foreground sm:text-lg">
-            Please submit the form
+            Create Your Free Account
           </h3>
         </div>
 

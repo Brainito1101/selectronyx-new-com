@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                  Request a demo or consultation
+                  Create a free account or consultation
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />

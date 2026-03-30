@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What is FairSpec?",
     answer:
-      "FairSpec is Selectronyx's structured hardware intelligence framework that evaluates vendors using measurable, ethical scoring pillars.",
+      "FairSpec is Selectronyx's structured hardware intelligence framework that evaluates vendors using measurable, data-driven scoring pillars.",
   },
   {
     question: "Is this only for large enterprises?",
@@ -22,12 +22,12 @@ const faqs = [
   {
     question: "How long does implementation take?",
     answer:
-      "Initial demo access is immediate. Full integration timelines depend on scope and hardware category.",
+      "Initial access is immediate. Full integration timelines depend on scope and hardware category.",
   },
   {
     question: "How is the score calculated?",
     answer:
-      "Scores are generated using structured evaluation models across integrity, sustainability, performance, and lifecycle transparency criteria.",
+      "Scores are generated using structured evaluation models across Repairability, Reliability, Sustainability, and Total Cost of Ownership (TCO) criteria.",
   },
   {
     question: "Is the data audit-ready?",

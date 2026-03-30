@@ -35,22 +35,20 @@ export function HeroSection({ onGetStartedClick, formSubmitted, onFormSubmit, sh
 
             <div>
               <h1 className="text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl lg:text-[2.75rem] lg:leading-[1.15]">
-                Transform Your BOM
+                Automate Global BOM Risk,
                 <br className="hidden sm:block" />
-                {" "}Analysis with{" "}
+                {" "}Compliance, and{" "}
                 <span
                   className="bg-clip-text text-transparent"
                   style={{
                     backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
                   }}
                 >
-                  AI Powered Intelligence
+                  Lifecycle Scoring
                 </span>
               </h1>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">
-                Ensure compliance, optimize costs and improve sustainability
-                across your entire bill of materials with our comprehensive
-                FairSpec rating system.
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">
+                Stop negotiating blindly. Selectronyx instantly flags RoHS, REACH, SCIP (EU) and TSCA, Prop 65, UFLPA (North America) failures before they hit production. Get automated, audit-ready global intelligence in seconds.
               </p>
             </div>
 
@@ -74,12 +72,12 @@ export function HeroSection({ onGetStartedClick, formSubmitted, onFormSubmit, sh
                 <p className="mt-0.5 text-[10px] text-muted-foreground sm:text-xs">Components<br />Analyzed</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-primary sm:text-xl lg:text-2xl">500+</p>
-                <p className="mt-0.5 text-[10px] text-muted-foreground sm:text-xs">BOMs Processed</p>
+                <p className="text-lg font-bold text-primary sm:text-xl lg:text-2xl">15M+</p>
+                <p className="mt-0.5 text-[10px] text-muted-foreground sm:text-xs">Monitoring Live<br />Component Lifecycles</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-primary sm:text-xl lg:text-2xl">99.9%</p>
-                <p className="mt-0.5 text-[10px] text-muted-foreground sm:text-xs">Accuracy Rate</p>
+                <p className="text-lg font-bold text-primary sm:text-xl lg:text-2xl">230+</p>
+                <p className="mt-0.5 text-[10px] text-muted-foreground sm:text-xs">REACH SVHC<br />Updates Tracked</p>
               </div>
               <div>
                 <p className="text-lg font-bold text-primary sm:text-xl lg:text-2xl">24/7</p>

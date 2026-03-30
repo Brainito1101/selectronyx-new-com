@@ -3,11 +3,13 @@ import { Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
+import Script from 'next/script'
+
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
 export const metadata: Metadata = {
-  title: 'Selectronyx - Transform Your BOM Analysis with AI',
-  description: 'Ensure compliance, optimize costs, and improve sustainability across your entire bill of materials with our comprehensive FairSpec rating system.',
+  title: 'Global BOM Compliance | RoHS, REACH, SCIP, TSCA & Prop 65 Automation',
+  description: 'Automate global BOM compliance for EU and North American markets. Track RoHS, REACH, SCIP, TSCA, and Prop 65 updates while optimizing lifecycle scoring and sustainability reporting.',
   icons: {
     icon: [
       { url: '/favicons/favicon.ico' },
@@ -32,6 +34,65 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.variable} font-sans antialiased`}>
+        {/* Google Analytics - Optimized for performance */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VEWZ63JN31"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-VEWZ63JN31', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Selectronyx",
+              "url": "https://www.selectronyx.com/",
+              "applicationCategory": "BusinessApplication",
+              "applicationSubCategory": "Enterprise SaaS",
+              "operatingSystem": "Web-based",
+              "description": "Selectronyx is an enterprise SaaS platform providing ethical electronics compliance, sustainability intelligence, and risk management for procurement, regulatory, and engineering teams.",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "B2B"
+              },
+              "creator": {
+                "@type": "Organization",
+                "name": "Selectronyx",
+                "url": "https://www.selectronyx.com/"
+              },
+              "provider": {
+                "@type": "Organization",
+                "name": "Selectronyx"
+              },
+              "featureList": [
+                "Electronics compliance intelligence",
+                "Sustainability scoring (repairability, reliability, lifecycle)",
+                "Audit-ready compliance reporting",
+                "Risk and supply chain insights",
+                "Procurement decision support",
+                "Continuous compliance monitoring"
+              ],
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/PreOrder"
+              }
+            })
+          }}
+        />
         {children}
         <Analytics />
       </body>

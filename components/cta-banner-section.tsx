@@ -1,11 +1,11 @@
 "use client"
 
 interface CtaBannerSectionProps {
-  onRequestDemo?: () => void
+  onCreateAccount?: () => void
   onTrySampleData?: () => void
 }
 
-export function CtaBannerSection({ onRequestDemo, onTrySampleData }: CtaBannerSectionProps) {
+export function CtaBannerSection({ onCreateAccount, onTrySampleData }: CtaBannerSectionProps) {
   return (
     <section className="bg-background py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -21,17 +21,17 @@ export function CtaBannerSection({ onRequestDemo, onTrySampleData }: CtaBannerSe
           <div className="pointer-events-none absolute -right-8 top-1/2 h-40 w-40 -translate-y-1/2 rounded-full border border-white/10" />
 
           <h2 className="relative text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
-            Ready to transform your
+            Ready to automate your
             <br />
-            hardware intelligence?
+            BOM risk and compliance?
           </h2>
 
           <div className="relative mt-8 flex flex-wrap items-center justify-center gap-4">
             <button
-              onClick={onRequestDemo}
+              onClick={onCreateAccount}
               className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-white/90 hover:shadow-lg"
             >
-              Request a Demo
+              Analyze Your First BOM
             </button>
             {/* <button
               onClick={onTrySampleData}

@@ -60,7 +60,7 @@ export function HeroSection({ onGetStartedClick, formSubmitted, onFormSubmit, sh
                   backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
                 }}
               >
-                Get Started Free
+                Create Free Account
                 <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </button>
             </div>

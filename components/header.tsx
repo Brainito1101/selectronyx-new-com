@@ -1,14 +1,7 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 
-
-
 export function Header() {
-  const handleClick = () => {
-    window.location.href = "https://app.selectronyx.com/auth/signin"
-  }
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
@@ -29,15 +22,15 @@ export function Header() {
           >
             Blog
           </Link>
-          <button
-            onClick={handleClick}
+          <a
+            href="https://app.selectronyx.com/auth/signin"
             className="shrink-0 rounded-md px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-all hover:opacity-90 hover:shadow-md sm:rounded-lg sm:px-5 sm:py-2 sm:text-sm"
             style={{
               backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
             }}
           >
             Login to App
-          </button>
+          </a>
         </div>
       </div>
     </header>

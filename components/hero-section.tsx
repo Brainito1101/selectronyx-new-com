@@ -1,33 +1,28 @@
-"use client"
+import dynamic from "next/dynamic"
+import { HeroButton } from "@/components/hero-button"
 
-import { ArrowRight } from "lucide-react"
-import { LeadFormEmbed } from "@/components/lead-form-embed"
-
-interface HeroSectionProps {
-  onGetStartedClick?: () => void
-  formSubmitted?: boolean
-  onFormSubmit?: () => void
-  showFormAlert?: boolean
-}
-
-export function HeroSection({ onGetStartedClick, formSubmitted, onFormSubmit, showFormAlert }: HeroSectionProps) {
-  const handleClick = () => {
-    if (formSubmitted) {
-      window.open("https://app.selectronyx.com/", "_blank", "noopener,noreferrer")
-    } else {
-      onGetStartedClick?.()
-    }
+// Defer the form island until hero is visible
+const HeroFormIsland = dynamic(
+  () => import("@/components/hero-form-island").then(mod => mod.HeroFormIsland),
+  { 
+    ssr: true,
+    loading: () => (
+      <div className="h-[500px] w-full max-w-sm animate-pulse rounded-xl border border-border bg-muted/20 lg:w-[380px]" />
+    )
   }
+)
+
+export function HeroSection() {
   return (
     <section className="bg-accent">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto] lg:gap-10">
-          {/* Left Content */}
+          {/* Left Content - Server Rendered */}
           <div className="flex flex-col gap-5 sm:gap-6">
             <div>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                 <svg width="12" height="12" viewBox="0 0 14 14" fill="none" className="text-primary">
-                  <path d="M7 1L9 5L13 5.5L10 8.5L11 13L7 11L3 13L4 8.5L1 5.5L5 5L7 1Z" fill="currentColor" />
+                   <path d="M7 1L9 5L13 5.5L10 8.5L11 13L7 11L3 13L4 8.5L1 5.5L5 5L7 1Z" fill="currentColor" />
                 </svg>
                 FairSpec Engine by Selectronyx
               </span>
@@ -52,20 +47,12 @@ export function HeroSection({ onGetStartedClick, formSubmitted, onFormSubmit, sh
               </p>
             </div>
 
-            <div>
-              <button
-                onClick={handleClick}
-                className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2.5 text-xs font-semibold text-primary-foreground transition-all hover:opacity-90 hover:shadow-lg sm:gap-2 sm:px-6 sm:py-2.5 sm:text-sm"
-                style={{
-                  backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
-                }}
-              >
-                Create Free Account
-                <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-              </button>
+            {/* Interactive Button island */}
+            <div className="pt-2">
+              <HeroButton />
             </div>
 
-            {/* Stats */}
+            {/* Stats - Server Side Rendering */}
             <div className="flex flex-wrap items-start gap-6 pt-2 sm:gap-8 sm:pt-4 lg:gap-12">
               <div>
                 <p className="text-lg font-bold text-primary sm:text-xl lg:text-2xl">10,000+</p>
@@ -86,18 +73,9 @@ export function HeroSection({ onGetStartedClick, formSubmitted, onFormSubmit, sh
             </div>
           </div>
 
-          {/* Right Form - Embedded */}
-          <div className="flex w-full max-w-sm flex-col gap-3 lg:w-[380px]">
-            {showFormAlert && (
-              <div className="w-full animate-in fade-in slide-in-from-top-2 rounded-xl border border-yellow-400 bg-yellow-50 px-4 py-3 text-center shadow-lg">
-                <p className="text-sm font-semibold text-yellow-800 sm:text-base">
-                  Please submit the form
-                </p>
-              </div>
-            )}
-            <div className="overflow-hidden rounded-xl border border-border bg-background shadow-lg">
-              <LeadFormEmbed className="h-[500px] w-full" id="hero" onFormSubmit={onFormSubmit} />
-            </div>
+          {/* Right Form - Interactive Island with delayed load */}
+          <div className="flex w-full flex-col">
+             <HeroFormIsland />
           </div>
         </div>
       </div>

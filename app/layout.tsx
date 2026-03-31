@@ -4,6 +4,8 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 import Script from 'next/script'
+import { PageStateProvider } from '@/components/page-context'
+import { DeferredAnalytics } from '@/components/deferred-analytics'
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
@@ -24,6 +26,14 @@ export const metadata: Metadata = {
       { url: '/favicons/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png', rel: 'icon' },
     ],
   },
+  other: {
+    'dns-prefetch': [
+      'https://www.googletagmanager.com',
+      'https://www.google-analytics.com',
+      'https://links.selectronyx.com',
+      'https://www.gstatic.com',
+    ]
+  },
 }
 
 export default function RootLayout({
@@ -34,22 +44,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.variable} font-sans antialiased`}>
-        {/* Google Analytics - Optimized for performance */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-VEWZ63JN31"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <DeferredAnalytics />
 
-            gtag('config', 'G-VEWZ63JN31', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
 
         <script
           type="application/ld+json"
@@ -93,7 +89,9 @@ export default function RootLayout({
             })
           }}
         />
-        {children}
+        <PageStateProvider>
+          {children}
+        </PageStateProvider>
         <Analytics />
       </body>
     </html>

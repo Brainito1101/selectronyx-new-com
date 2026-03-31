@@ -1,11 +1,10 @@
 "use client"
 
-interface CtaBannerSectionProps {
-  onCreateAccount?: () => void
-  onTrySampleData?: () => void
-}
+import { usePageContext } from "@/components/page-context"
 
-export function CtaBannerSection({ onCreateAccount, onTrySampleData }: CtaBannerSectionProps) {
+export function CtaBannerSection() {
+  const { openLogin } = usePageContext()
+  
   return (
     <section className="bg-background py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -28,17 +27,11 @@ export function CtaBannerSection({ onCreateAccount, onTrySampleData }: CtaBanner
 
           <div className="relative mt-8 flex flex-wrap items-center justify-center gap-4">
             <button
-              onClick={onCreateAccount}
+              onClick={openLogin}
               className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-white/90 hover:shadow-lg"
             >
               Analyze Your First BOM
             </button>
-            {/* <button
-              onClick={onTrySampleData}
-              className="rounded-lg border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:shadow-lg"
-            >
-              Try Sample Data
-            </button> */}
           </div>
         </div>
       </div>

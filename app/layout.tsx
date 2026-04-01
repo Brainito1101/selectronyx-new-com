@@ -10,8 +10,8 @@ import { DeferredAnalytics } from '@/components/deferred-analytics'
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
 export const metadata: Metadata = {
-  title: 'Global BOM Compliance | RoHS, REACH, SCIP, TSCA & Prop 65 Automation',
-  description: 'Automate global BOM compliance for EU and North American markets. Track RoHS, REACH, SCIP, TSCA, and Prop 65 updates while optimizing lifecycle scoring and sustainability reporting.',
+  title: 'Automated BOM Compliance Checker | RoHS, REACH & Obsolescence',
+  description: 'Automate BOM compliance with RoHS & REACH checks. Identify EOL risks, track PCN updates, monitor SVHC, and optimize total cost of ownership',
   icons: {
     icon: [
       { url: '/favicons/favicon.ico' },

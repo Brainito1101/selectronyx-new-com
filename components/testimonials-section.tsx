@@ -43,7 +43,7 @@ export function TestimonialsSection() {
               <div className="order-1 shrink-0 lg:order-2">
                 <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-primary/5 shadow-lg sm:h-48 sm:w-48 lg:h-56 lg:w-56">
                   <Image
-                    src="https://res.cloudinary.com/dspez5cnn/image/upload/v1774868323/Frame_317_zocqtg.png"
+                    src="https://res.cloudinary.com/dspez5cnn/image/upload/q_auto/f_auto/v1775128401/Frame_416_rm4cbb.png"
                     alt="Ian - Founder & CEO"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 256px"

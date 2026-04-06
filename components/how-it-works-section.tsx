@@ -57,7 +57,7 @@ export function HowItWorksSection() {
           {/* Screenshot */}
           <div className="relative rounded-2xl overflow-hidden border border-border shadow-xl ring-1 ring-black/5 bg-muted/30">
             <Image
-              src="https://res.cloudinary.com/dspez5cnn/image/upload/q_auto/f_auto/v1775129481/Frame_417_ida9vj.png"
+              src="https://res.cloudinary.com/dspez5cnn/image/upload/q_auto/f_auto/v1775471877/image_181_jjob3y.png"
               alt="Upload Your BOM interface"
               width={960}
               height={640}
@@ -133,7 +133,7 @@ export function HowItWorksSection() {
           {/* Screenshot (left on lg) */}
           <div className="relative rounded-2xl overflow-hidden border border-border shadow-xl ring-1 ring-black/5 bg-muted/30 order-2 lg:order-1">
             <Image
-              src="https://res.cloudinary.com/dspez5cnn/image/upload/q_auto/f_auto/v1775129481/Frame_418_sw7yow.png"
+              src="https://res.cloudinary.com/dspez5cnn/image/upload/q_auto/f_auto/v1775471877/Group_386_dx7t1d.png"
               alt="Analysis history and audit-ready documentation"
               width={960}
               height={640}

@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useRef, useCallback } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
@@ -13,7 +13,6 @@ const testimonials = [
     subtitle: "",
     imageSrc:
       "https://res.cloudinary.com/dspez5cnn/image/upload/q_auto/f_auto/v1775128401/Frame_416_rm4cbb.png",
-    linkedIn: "https://www.linkedin.com/company/selectronyx/",
   },
   {
     quote:
@@ -22,7 +21,6 @@ const testimonials = [
     title: "Senior Mechatronics Designer",
     subtitle: "",
     imageSrc: null,
-    linkedIn: "https://www.linkedin.com/",
   },
   {
     quote:
@@ -31,7 +29,14 @@ const testimonials = [
     title: "System Architect",
     subtitle: "Philips Personal Health",
     imageSrc: null,
-    linkedIn: "https://www.linkedin.com/",
+  },
+  {
+    quote:
+      "Selectronyx bridges the gap between hardware engineering and strategic procurement. It brings predictive, enterprise-grade supply chain intelligence directly to the engineer's desk.",
+    name: "Simon Malone",
+    title: "Industrialization Engineer",
+    subtitle: "ASML",
+    imageSrc: null,
   },
 ]
 
@@ -46,24 +51,67 @@ function getInitials(name: string) {
     .toUpperCase()
 }
 
-// Avatar background uses theme primary color
-
 export function TestimonialsSection() {
-  const totalPages = Math.ceil(testimonials.length / CARDS_PER_PAGE)
-  const [page, setPage] = useState(0)
+  const maxOffset = testimonials.length - CARDS_PER_PAGE
+  const [offset, setOffset] = useState(0)
 
-  const visibleStart = page * CARDS_PER_PAGE
-  const visibleTestimonials = testimonials.slice(
-    visibleStart,
-    visibleStart + CARDS_PER_PAGE
-  )
+  const canPrev = offset > 0
+  const canNext = offset < maxOffset
 
-  const canPrev = page > 0
-  const canNext = page < totalPages - 1
+  const visibleTestimonials = testimonials.slice(offset, offset + CARDS_PER_PAGE)
+
+  // ── Drag-to-scroll state ──
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const isDragging = useRef(false)
+  const startX = useRef(0)
+  const scrollLeft = useRef(0)
+  // Track if a real drag happened so we can suppress click events
+  const didDrag = useRef(false)
+
+  const onMouseDown = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const el = scrollRef.current
+    if (!el) return
+    isDragging.current = true
+    didDrag.current = false
+    startX.current = e.pageX - el.offsetLeft
+    scrollLeft.current = el.scrollLeft
+    el.style.cursor = "grabbing"
+    el.style.userSelect = "none"
+  }, [])
+
+  const onMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging.current) return
+    const el = scrollRef.current
+    if (!el) return
+    e.preventDefault()
+    const x = e.pageX - el.offsetLeft
+    const walk = (x - startX.current) * 1.2
+    if (Math.abs(walk) > 4) didDrag.current = true
+    el.scrollLeft = scrollLeft.current - walk
+  }, [])
+
+  const onMouseUp = useCallback(() => {
+    isDragging.current = false
+    const el = scrollRef.current
+    if (el) {
+      el.style.cursor = "grab"
+      el.style.userSelect = ""
+    }
+  }, [])
+
+  const onMouseLeave = useCallback(() => {
+    if (isDragging.current) {
+      isDragging.current = false
+      const el = scrollRef.current
+      if (el) {
+        el.style.cursor = "grab"
+        el.style.userSelect = ""
+      }
+    }
+  }, [])
 
   return (
     <section className="bg-background py-16 sm:py-20 lg:py-24">
-      {/* Increased container width to reduce left/right space */}
       <div className="mx-auto max-w-[92%] px-4 sm:px-6 2xl:max-w-[1600px]">
 
         {/* Section heading */}
@@ -73,12 +121,24 @@ export function TestimonialsSection() {
           </h2>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid gap-6 md:grid-cols-3">
+        {/*
+          Drag-scrollable wrapper on mobile / if content overflows.
+          On md+ it stays as a 3-col grid — the overflow is hidden by the
+          grid so no scrollbar appears on desktop.
+        */}
+        <div
+          ref={scrollRef}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          onMouseUp={onMouseUp}
+          onMouseLeave={onMouseLeave}
+          className="grid gap-6 md:grid-cols-3 select-none cursor-grab overflow-x-auto"
+          style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
+        >
           {visibleTestimonials.map((t, idx) => (
             <div
-              key={visibleStart + idx}
-              className="flex flex-col rounded-2xl border border-primary/10 bg-background p-6 shadow-[0_8px_30px_rgba(27,171,161,0.07)] transition-shadow hover:shadow-[0_12px_40px_rgba(27,171,161,0.14)]"
+              key={offset + idx}
+              className="flex flex-col rounded-2xl border border-primary/10 bg-background p-6 shadow-[0_8px_30px_rgba(27,171,161,0.07)] transition-shadow hover:shadow-[0_12px_40px_rgba(27,171,161,0.14)] min-w-[280px]"
             >
               {/* Top row: Avatar + Name/Title */}
               <div className="mb-4 flex items-center gap-3">
@@ -110,52 +170,50 @@ export function TestimonialsSection() {
                 </div>
               </div>
 
-              {/* Quote text */}
+              {/* Quote */}
               <p className="text-[14px] leading-[1.6] text-foreground/80">
-                "{t.quote}"
+                &ldquo;{t.quote}&rdquo;
               </p>
             </div>
           ))}
         </div>
 
-        {/* Navigation arrows — only shown when there are multiple pages */}
-        {totalPages > 1 && (
-          <div className="mt-10 flex items-center justify-center gap-4">
-            <button
-              onClick={() => setPage((p) => Math.max(0, p - 1))}
-              disabled={!canPrev}
-              aria-label="Previous testimonials"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-background text-primary transition-all hover:bg-primary hover:text-white disabled:opacity-30 disabled:cursor-not-allowed shadow-sm"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
+        {/* Prev / dots / Next navigation */}
+        <div className="mt-10 flex items-center justify-center gap-4">
+          <button
+            onClick={() => setOffset((o) => Math.max(0, o - 1))}
+            disabled={!canPrev}
+            aria-label="Previous testimonial"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-background text-primary transition-all hover:bg-primary hover:text-white disabled:opacity-30 disabled:cursor-not-allowed shadow-sm"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
 
-            {/* Page dots */}
-            <div className="flex gap-2">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setPage(i)}
-                  aria-label={`Go to page ${i + 1}`}
-                  className={`h-2 rounded-full transition-all ${
-                    i === page
-                      ? "w-6 bg-primary"
-                      : "w-2 bg-primary/20 hover:bg-primary/40"
-                  }`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
-              disabled={!canNext}
-              aria-label="Next testimonials"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-background text-primary transition-all hover:bg-primary hover:text-white disabled:opacity-30 disabled:cursor-not-allowed shadow-sm"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
+          {/* One dot per offset position */}
+          <div className="flex gap-2">
+            {Array.from({ length: maxOffset + 1 }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setOffset(i)}
+                aria-label={`Go to position ${i + 1}`}
+                className={`h-2 rounded-full transition-all ${
+                  i === offset
+                    ? "w-6 bg-primary"
+                    : "w-2 bg-primary/20 hover:bg-primary/40"
+                }`}
+              />
+            ))}
           </div>
-        )}
+
+          <button
+            onClick={() => setOffset((o) => Math.min(maxOffset, o + 1))}
+            disabled={!canNext}
+            aria-label="Next testimonial"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/20 bg-background text-primary transition-all hover:bg-primary hover:text-white disabled:opacity-30 disabled:cursor-not-allowed shadow-sm"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
 
       </div>
     </section>

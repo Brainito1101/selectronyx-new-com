@@ -11,7 +11,6 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 
 // Optimized Dynamic Client Components (using ssr: false via client wrapper)
 import { 
-    CaseStudiesSectionDeferred, 
     FaqSectionDeferred, 
     CtaBannerSectionDeferred 
 } from "@/components/client-deferred"
@@ -26,7 +25,6 @@ export default function Home() {
         <RegulatoryCoverageSection />
         <HowItWorksSection />
         <BenefitsSection />
-        <CaseStudiesSectionDeferred />
         <TestimonialsSection />
         <FaqSectionDeferred />
         <CtaBannerSectionDeferred />

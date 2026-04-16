@@ -4,8 +4,8 @@ import { ArrowLeft } from "lucide-react"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Selectronyx",
-  description: "Privacy Policy for Selectronyx website and services.",
+  title: "Selectronyx Privacy Policy | Data Protection & Security",
+  description: "Learn how Selectronyx handles your data. Our privacy policy covers  data collection, use, storage, and your rights as a user of your compliance platform",
 }
 
 export default function PrivacyPolicyPage() {

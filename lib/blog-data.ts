@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "transparent-data-driven-electronics-risk-compliance",
     cardTitle:
-      "Why Businesses Need Transparent, Data-Driven Electronics Risk & Compliance",
+      "Data-Driven Electronics Risk & Compliance",
     cardSubtitle:
       "Lifecycle visibility, hardware intelligence, and regulatory alignment.",
     image:
@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
     date: "January 2025",
     readTime: "8 min read",
     title:
-      "Why Businesses Need Transparent, Data-Driven Electronics Risk & Compliance Intelligence",
+      "Data-Driven Electronics Risk & Compliance",
     description:
       "Electronics decisions today carry far more risk than price and availability suggest. Compliance exposure, repairability constraints, and ethical sourcing risks often remain invisible until after...",
     content: [
@@ -147,7 +147,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "repairability-vs-replaceability-hidden-economics",
     cardTitle:
-      "Repairability vs. Replaceability: The Hidden Economics of Hardware Decisions",
+      "Repairability vs. Replaceability: Hidden Hardware Costs",
     cardSubtitle:
       "Analyzing the long-term impact of hardware lifecycle choices on costs and operations.",
     image:
@@ -157,7 +157,7 @@ export const blogPosts: BlogPost[] = [
     date: "January 2025",
     readTime: "7 min read",
     title:
-      "Repairability vs. Replaceability: The Hidden Economics of Hardware Decisions",
+      "Repairability vs. Replaceability: Hidden Hardware Costs",
     description:
       "Most hardware failures don't originate after deployment. They originate at procurement, when repairability, reliability, and lifecycle cost are overlooked.",
     content: [
@@ -274,13 +274,13 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "why-total-cost-of-ownership-matters-more-than-purchase-price",
-    cardTitle: "Why Total Cost of Ownership Matters More Than Purchase Price",
+    cardTitle: "Why TCO Matters More Than Purchase Price",
     cardSubtitle: "Evaluating technology investments beyond initial purchase price through lifecycle and operational impact.",
     image: "https://assets.cdn.filesafe.space/jNVneWAhhTNAGSr6GqmX/media/69b17495cab7f7774c4148c9.png",
     imageAlt: "Total Cost of Ownership vs Purchase Price visualization",
     date: "March 2026",
     readTime: "6 min read",
-    title: "Why Total Cost of Ownership Matters More Than Purchase Price",
+    title: "Why TCO Matters More Than Purchase Price",
     description: "Total Cost of Ownership (TCO) provides a broader framework for evaluating technology investments by considering maintenance, energy consumption, reliability, downtime, repairability, and replacement cycles.",
     content: [
       {

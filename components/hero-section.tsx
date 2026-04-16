@@ -30,20 +30,20 @@ export function HeroSection() {
 
             <div>
               <h1 className="text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl lg:text-[2.75rem] lg:leading-[1.15]">
-                Automate Global BOM Risk,
+                The global standard for
                 <br className="hidden sm:block" />
-                {" "}Compliance, and{" "}
+                {" "}
                 <span
                   className="bg-clip-text text-transparent"
                   style={{
                     backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
                   }}
                 >
-                  Lifecycle Scoring
+                  Ethical HW Intelligence.
                 </span>
               </h1>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">
-                Stop negotiating blindly. Selectronyx instantly flags RoHS, REACH, SCIP (EU) and TSCA, Prop 65, UFLPA (North America) failures before they hit production. Get automated, audit-ready global intelligence in seconds.
+                Selectronyx transforms sustainable and responsible sourcing into quantifiable data. Automate your BOM compliance, predict component lifecycles, and secure your supply chain before the architecture is locked.
               </p>
             </div>
 

@@ -21,7 +21,7 @@ export function HeroButton() {
         backgroundImage: "linear-gradient(135deg, #1BABA1 0%, #0E7490 100%)",
       }}
     >
-      Create Free Account
+      Run a Free BOM Audit
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

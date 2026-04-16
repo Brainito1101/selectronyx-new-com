@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Terms & Conditions - Selectronyx",
-  description: "Terms and Conditions for using Selectronyx website and services.",
+  description: "Selectronyx terms and conditions outline your rights and responsibilities when using our BOM compliance, RoHS tracking,  and electronics risk platform.",
 }
 
 export default function TermsAndConditionsPage() {

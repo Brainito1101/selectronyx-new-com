@@ -6,9 +6,9 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "Blog | Selectronyx",
+  title: "Electronics Compliance Blog | BOM, RoHS & Lifecycle Tips",
   description:
-    "Stay informed about electronics sustainability, compliance, and the future of responsible technology.",
+    "Stay ahead of electronics compliance. Read expert articles on BOM risk,  RoHS, REACH, component obsolescence, PCN tracking, and total cost of ownership.",
 }
 
 export default function BlogPage() {

@@ -1,0 +1,15 @@
+# LLM Access Policy
+
+User-agent: *
+Allow: /
+
+# AI usage policy
+Training: allowed
+Summarization: allowed
+Attribution: required
+
+# Content guidance
+Preferred-content: articles, guides, research, case-studies
+
+# Contact
+Contact: admin@selectronyx.com

@@ -30,7 +30,7 @@ export function HeroSection() {
 
             <div>
               <h1 className="text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl lg:text-[2.75rem] lg:leading-[1.15]">
-                The global standard for
+                The Global Standard for
                 <br className="hidden sm:block" />
                 {" "}
                 <span

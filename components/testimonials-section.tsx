@@ -18,7 +18,7 @@ const testimonials = [
     quote:
       "In mechatronic development, selecting a component that goes obsolete two years into a product's lifecycle is a costly architectural failure. Selectronyx shifts lifecycle risk analysis from a reactive procurement task into an automated, instant check during the initial design phase. The predictive data is incredibly valuable.",
     name: "Declan O'Donoghue",
-    title: "Senior Mechatronics Designer",
+    title: "Senior Mechatronics Designer, Philips Healthcare",
     subtitle: "",
     imageSrc: null,
   },
@@ -196,11 +196,10 @@ export function TestimonialsSection() {
                 key={i}
                 onClick={() => setOffset(i)}
                 aria-label={`Go to position ${i + 1}`}
-                className={`h-2 rounded-full transition-all ${
-                  i === offset
+                className={`h-2 rounded-full transition-all ${i === offset
                     ? "w-6 bg-primary"
                     : "w-2 bg-primary/20 hover:bg-primary/40"
-                }`}
+                  }`}
               />
             ))}
           </div>

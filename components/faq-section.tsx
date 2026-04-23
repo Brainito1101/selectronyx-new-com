@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What is FairSpec?",
     answer:
-      "FairSpec is Selectronyx's structured hardware intelligence framework that evaluates vendors using measurable, data-driven scoring pillars.",
+      "FairSpec is Selectronyx's electronic hardware intelligence engine that evaluates the risk level of your BOM using measurable, data-driven scoring on 4 pillars - Repairability, Reliability, Sustainability and Total Cost of Ownership (TCO).",
   },
   {
     question: "Is this only for large enterprises?",

@@ -34,8 +34,7 @@ export function HowItWorksSection() {
               Define the Scope
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base mb-6">
-              Submit hardware categories or upload your Bill of Materials (BOM)
-              to instantly cross-reference millions of authorized components against live EU, UK, and US compliance databases.
+              Submit hardware categories or upload your Bill of Materials (BOM) to instantly cross-reference millions of authorized electronic components against live EU, UK, and US compliance databases.
             </p>
             <ul className="space-y-3">
               {[

@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     'dns-prefetch': [
       'https://www.googletagmanager.com',
       'https://www.google-analytics.com',
+      'https://connect.facebook.net',
       'https://links.selectronyx.com',
       'https://www.gstatic.com',
     ]

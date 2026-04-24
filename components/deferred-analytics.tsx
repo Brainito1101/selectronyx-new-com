@@ -1,79 +1,46 @@
-"use client"
-
-import { useEffect, useState } from 'react'
 import Script from 'next/script'
 
+const GOOGLE_TAG_ID = 'GT-NNZR6LZB'
+const META_PIXEL_ID = '905319662478437'
+
 export function DeferredAnalytics() {
-  const [shouldLoad, setShouldLoad] = useState(false)
-
-  useEffect(() => {
-    // Check if we already loaded it to prevent double loading
-    let fired = false
-    
-    const loadScripts = () => {
-      if (fired) return
-      fired = true
-      setShouldLoad(true)
-      
-      // Cleanup event listeners
-      window.removeEventListener('scroll', loadScripts)
-      window.removeEventListener('mousemove', loadScripts)
-      window.removeEventListener('touchstart', loadScripts)
-      window.removeEventListener('keydown', loadScripts)
-    }
-
-    // Load after a safe delay (4 seconds) or on interaction
-    const timeout = setTimeout(loadScripts, 4000)
-    
-    // Listen for common user interactions
-    window.addEventListener('scroll', loadScripts, { passive: true })
-    window.addEventListener('mousemove', loadScripts, { passive: true })
-    window.addEventListener('touchstart', loadScripts, { passive: true })
-    window.addEventListener('keydown', loadScripts, { passive: true })
-
-    return () => {
-      clearTimeout(timeout)
-      window.removeEventListener('scroll', loadScripts)
-      window.removeEventListener('mousemove', loadScripts)
-      window.removeEventListener('touchstart', loadScripts)
-      window.removeEventListener('keydown', loadScripts)
-    }
-  }, [])
-
-  if (!shouldLoad) return null
-
   return (
     <>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-VEWZ63JN31"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
         strategy="afterInteractive"
-        crossOrigin="anonymous"
-        fetchPriority="low"
-        async
       />
-      <Script id="google-analytics-deferred" strategy="afterInteractive">
+      <Script id="google-tag-gtag" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
-
-          // Google Consent Mode (GCM)
-          gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied',
-            'wait_for_update': 500
-          });
-
           gtag('js', new Date());
-
-          // Secure cookie configuration
-          gtag('config', 'G-VEWZ63JN31', {
-            page_path: window.location.pathname,
-            cookie_flags: 'SameSite=None;Secure'
-          });
+          gtag('config', '${GOOGLE_TAG_ID}');
         `}
       </Script>
+      <Script id="meta-pixel" strategy="afterInteractive">
+        {`
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${META_PIXEL_ID}');
+fbq('track', 'PageView');
+        `}
+      </Script>
+      <noscript>
+        <img
+          height={1}
+          width={1}
+          style={{ display: 'none' }}
+          src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+          alt=""
+        />
+      </noscript>
     </>
   )
 }

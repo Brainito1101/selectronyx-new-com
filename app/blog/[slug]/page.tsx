@@ -108,12 +108,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 {section.bullets && (
                   <ul className="flex flex-col gap-2 pl-5">
                     {section.bullets.map((bullet, k) => (
-                      <li
-                        key={k}
-                        className="list-disc text-sm leading-relaxed text-muted-foreground marker:text-primary sm:text-base"
-                      >
-                        {bullet}
-                      </li>
+                     <li
+  key={k}
+  className="list-disc text-sm leading-relaxed text-muted-foreground marker:text-primary sm:text-base"
+  dangerouslySetInnerHTML={{ __html: bullet }}
+/>
                     ))}
                   </ul>
                 )}

@@ -436,7 +436,7 @@ export const blogPosts: BlogPost[] = [
     },
 
     {
-      heading: "What Are Ethical Electronic Components?",
+      heading: "What Are <a href='https://selectronyx.com' target='_blank' rel='noopener noreferrer'>Ethical Electronic Components</a>?",
       paragraphs: [
         "Ethical electronic components must meet four key standards simultaneously."
       ],

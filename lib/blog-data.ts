@@ -151,7 +151,7 @@ export const blogPosts: BlogPost[] = [
     cardSubtitle:
       "Analyzing the long-term impact of hardware lifecycle choices on costs and operations.",
     image:
-      "https://storage.googleapis.com/msgsndr/jNVneWAhhTNAGSr6GqmX/media/697b37cf1fd82785b78fcf8d.png",
+      "https://assets.cdn.filesafe.space/jNVneWAhhTNAGSr6GqmX/media/69ecb1379fe87a9994de0248.png",
     imageAlt:
       "Balance scale comparing Repairability versus Replaceability with scoring metrics",
     date: "January 2025",

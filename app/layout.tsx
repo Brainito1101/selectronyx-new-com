@@ -10,8 +10,8 @@ import { DeferredAnalytics } from '@/components/deferred-analytics'
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
 export const metadata: Metadata = {
-  title: 'Selectronyx',
-  description: 'The global standard for Ethical HW Intelligence. Selectronyx transforms sustainable and responsible sourcing into quantifiable data.',
+  title: 'Automated BOM Compliance Checker | RoHS, REACH & Obsolescence',
+  description: 'Automate BOM compliance with RoHS & REACH checks. Identify EOL risks, track PCN updates, monitor SVHC, and optimize total cost of ownership',
   icons: {
     icon: [
       { url: '/favicons/favicon.ico' },
@@ -44,127 +44,127 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.variable} font-sans antialiased`}>       
+      <body className={`${montserrat.variable} font-sans antialiased`}>
         <DeferredAnalytics />
 
 
-  <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify([
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Selectronyx",
-        "url": "https://www.selectronyx.com/",
-        "applicationCategory": "BusinessApplication",
-        "applicationSubCategory": "Enterprise SaaS",
-        "operatingSystem": "Any",
-        "description": "Selectronyx is an enterprise SaaS platform providing ethical electronics compliance, sustainability intelligence, and risk management.",
-        "creator": {
-          "@type": "Organization",
-          "name": "Selectronyx",
-          "url": "https://www.selectronyx.com/"
-        },
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.selectronyx.com/"
-        },
-        "featureList": [
-          "Electronics compliance intelligence",
-          "Sustainability scoring",
-          "Audit-ready compliance reporting",
-          "Risk and supply chain insights",
-          "Procurement decision support",
-          "Continuous compliance monitoring"
-        ],
-        "sameAs": [
-          "https://www.linkedin.com/company/selectronyx"
-        ],
-        "image": "https://www.selectronyx.com/logo.png"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Selectronyx",
-        "url": "https://www.selectronyx.com/",
-        "logo": "https://www.selectronyx.com/logo.png",
-        "sameAs": [
-          "https://www.linkedin.com/company/selectronyx/",
-          "https://www.facebook.com/selectronyx",
-          "https://www.instagram.com/selectronyx_tech_hub/"
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://www.selectronyx.com/",
-        "name": "Selectronyx"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is FairSpec?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "FairSpec is Selectronyx's structured hardware intelligence framework that evaluates vendors using measurable, data-driven scoring pillars."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is this only for large enterprises?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. While built for enterprise-grade procurement, mid-sized organizations with structured sourcing needs also benefit significantly."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does implementation take?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Initial access is immediate. Full integration timelines depend on scope and hardware category."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does FairSpec replace our existing RFP process?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. It enhances it by adding standardized intelligence scoring and documentation."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How is the score calculated?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Scores are generated using structured evaluation models across Repairability, Reliability, Sustainability, and Total Cost of Ownership (TCO) criteria."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is the data audit-ready?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. FairSpec produces documentation aligned with governance and compliance expectations."
-            }
-          }
-        ]
-      }
-    ])
-  }}
-/>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Selectronyx",
+                "url": "https://www.selectronyx.com/",
+                "applicationCategory": "BusinessApplication",
+                "applicationSubCategory": "Enterprise SaaS",
+                "operatingSystem": "Any",
+                "description": "Selectronyx is an enterprise SaaS platform providing ethical electronics compliance, sustainability intelligence, and risk management.",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "Selectronyx",
+                  "url": "https://www.selectronyx.com/"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://www.selectronyx.com/"
+                },
+                "featureList": [
+                  "Electronics compliance intelligence",
+                  "Sustainability scoring",
+                  "Audit-ready compliance reporting",
+                  "Risk and supply chain insights",
+                  "Procurement decision support",
+                  "Continuous compliance monitoring"
+                ],
+                "sameAs": [
+                  "https://www.linkedin.com/company/selectronyx"
+                ],
+                "image": "https://www.selectronyx.com/logo.png"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Selectronyx",
+                "url": "https://www.selectronyx.com/",
+                "logo": "https://www.selectronyx.com/logo.png",
+                "sameAs": [
+                  "https://www.linkedin.com/company/selectronyx/",
+                  "https://www.facebook.com/selectronyx",
+                  "https://www.instagram.com/selectronyx_tech_hub/"
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "url": "https://www.selectronyx.com/",
+                "name": "Selectronyx"
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What is FairSpec?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "FairSpec is Selectronyx's structured hardware intelligence framework that evaluates vendors using measurable, data-driven scoring pillars."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is this only for large enterprises?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "No. While built for enterprise-grade procurement, mid-sized organizations with structured sourcing needs also benefit significantly."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How long does implementation take?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Initial access is immediate. Full integration timelines depend on scope and hardware category."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does FairSpec replace our existing RFP process?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "No. It enhances it by adding standardized intelligence scoring and documentation."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How is the score calculated?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Scores are generated using structured evaluation models across Repairability, Reliability, Sustainability, and Total Cost of Ownership (TCO) criteria."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is the data audit-ready?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. FairSpec produces documentation aligned with governance and compliance expectations."
+                    }
+                  }
+                ]
+              }
+            ])
+          }}
+        />
         <PageStateProvider>
           {children}
         </PageStateProvider>
         <Analytics />
-         {/* Leadinfo tracking code */}
+        {/* Leadinfo tracking code */}
         <Script
           id="leadinfo-tracking"
           strategy="afterInteractive"

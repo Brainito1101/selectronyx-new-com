@@ -475,7 +475,7 @@ export const blogPosts: BlogPost[] = [
         "Modern procurement uses a scoring model beyond pass/fail."
       ],
       bullets: [
-        "Repairability – Can the component be replaced?",
+        "<a href='/blog/repairability-vs-replaceability-hidden-economics'>Repairability</a> – Can the component be replaced?",
         "Reliability – Failure rate and supply stability",
         "Sustainability – Environmental and chemical impact",
         "Total Cost of Ownership (TCO) – Long-term cost impact"

@@ -10,8 +10,15 @@ import { DeferredAnalytics } from '@/components/deferred-analytics'
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' })
 
 export const metadata: Metadata = {
-  title: 'Automated BOM Compliance Checker | RoHS, REACH & Obsolescence',
-  description: 'Automate BOM compliance with RoHS & REACH checks. Identify EOL risks, track PCN updates, monitor SVHC, and optimize total cost of ownership',
+  title: 'BOM Compliance & Obsolescence Management Software | Selectronyx',
+  description: 'Ensure BOM compliance with RoHS & REACH regulations. Track obsolescence risks, monitor SVHC, and manage PCN updates with Selectronyx.',
+  alternates: {
+    canonical: 'https://selectronyx.com/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       { url: '/favicons/favicon.ico' },

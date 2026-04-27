@@ -90,11 +90,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {post.content.map((section, i) => (
               <div key={i} className="flex flex-col gap-4">
                 {section.heading && (
-                  <h2
-                  className="text-xl font-bold text-foreground sm:text-2xl"
-                  dangerouslySetInnerHTML={{ __html: section.heading }}
-                  /h2>
-                )}
+  <h2
+    className="text-xl font-bold text-foreground sm:text-2xl"
+    dangerouslySetInnerHTML={{ __html: section.heading }}
+  />
+)}
 
                 {section.paragraphs?.map((p, j) => (
                   <p

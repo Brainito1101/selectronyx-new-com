@@ -402,7 +402,81 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     ]
-  }
+  },
+  {
+  slug: "ethical-electronic-components-guide",
+
+  cardTitle: "Ethical Electronic Components Guide",
+
+  cardSubtitle:
+    "Understanding compliance, supply chain transparency, and lifecycle risk in hardware procurement.",
+
+  image:
+    "https://assets.cdn.filesafe.space/jNVneWAhhTNAGSr6GqmX/media/69ef236f05d4199001ed7e34.png",
+
+  imageAlt:
+    "Illustration showing ethical sourcing, compliance, and electronic components lifecycle",
+
+  date: "April 2026",
+
+  readTime: "10 min read",
+
+  title: "The Complete Guide to Ethical Electronic Components",
+
+  description:
+    "A structured guide explaining ethical electronic components, compliance frameworks like RoHS & REACH, and how procurement teams can reduce risk using data-driven decisions.",
+
+  content: [
+    {
+      paragraphs: [
+        "Electronic components are now subject to strict regulatory and ethical scrutiny across global markets.",
+        "Procurement teams must evaluate not just cost, but compliance, lifecycle, and supply chain transparency.",
+      ],
+    },
+    {
+      heading: "What Are Ethical Electronic Components?",
+      paragraphs: [
+        "Ethical electronic components meet regulatory compliance, supply chain transparency, lifecycle integrity, and environmental accountability.",
+      ],
+      bullets: [
+        "Regulatory compliance (RoHS, REACH)",
+        "Supply chain traceability",
+        "Lifecycle alignment",
+        "Environmental responsibility",
+      ],
+    },
+    {
+      heading: "Why Compliance Matters",
+      paragraphs: [
+        "Failure to comply with global regulations can result in market bans and financial risks.",
+      ],
+      bullets: [
+        "EU RoHS restrictions",
+        "REACH SVHC tracking",
+        "SCIP database requirements",
+        "Global compliance complexity",
+      ],
+    },
+    {
+      heading: "The Role of TCO in Component Selection",
+      paragraphs: [
+        "Total Cost of Ownership (TCO) helps evaluate long-term cost beyond initial price.",
+      ],
+      bullets: [
+        "Maintenance cost",
+        "Failure rates",
+        "Lifecycle risk",
+        "Compliance cost",
+      ],
+    },
+    {
+      heading: "Conclusion",
+      paragraphs: [
+        "Ethical sourcing is no longer optional. It is a business necessity for risk reduction, compliance, and long-term sustainability.",
+      ],
+    },
+  ],
+}
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {

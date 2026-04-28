@@ -12,7 +12,7 @@ const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat
 export const metadata: Metadata = {
 
   title: "BOM Compliance & Obsolescence Software | Selectronyx",
-  description: "Ensure BOM compliance with RoHS & REACH. Track obsolescence risks, monitor SVHC, and manage PCN updates with Selectronyx."
+  description: "Ensure BOM compliance with RoHS & REACH. Track obsolescence risks, monitor SVHC, and manage PCN updates with Selectronyx.",
    verification: {
     google: "oSj5HE1ReWYkjbVINUjKLdL1BB0LeDzKYkoI_7zEDvU",
       

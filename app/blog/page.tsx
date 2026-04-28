@@ -17,38 +17,41 @@ export default function BlogPage() {
       <Header />
       <main className="flex-1 bg-secondary">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          
 
-         {/* Page Header */}
-<div className="mx-auto max-w-2xl text-center">
+          {/* Page Header */}
+          <div className="mx-auto max-w-2xl text-center">
 
-  <h1 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
-    Latest Insights
-  </h1>
+            <h1 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
+              Latest Insights
+            </h1>
 
-  <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-    Explore the Selectronyx Blog for insights on electronics compliance, BOM management, and component lifecycle.
-  </p>
+            {/* ✅ Paragraph 1 */}
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              Explore the Selectronyx Blog for insights on electronics compliance, BOM management, and component lifecycle.
+            </p>
 
-  <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
-    Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.
-  </p>
+            {/* ✅ Paragraph 2 */}
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              Learn to manage RoHS and REACH, track component obsolescence, reduce risk, and make smarter hardware decisions.
+            </p>
 
-</div>
+          </div>
 
-  <p className="mb-3 text-muted-foreground text-sm">
-    Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.
-  </p>
+          {/* ✅ CENTERED BLOCK + LEFT LIST */}
+          <div className="mt-6 max-w-2xl mx-auto text-center">
 
-  {/* ✅ FIXED LIST */}
-  <ul className="list-disc list-inside text-left mx-auto w-fit text-muted-foreground text-sm space-y-1">
-    <li>BOM compliance strategies</li>
-    <li>Lifecycle & obsolescence tracking</li>
-    <li>Sustainable sourcing</li>
-    <li>TCO insights</li>
-  </ul>
+            <ul className="list-disc list-inside text-left mx-auto w-fit text-muted-foreground text-sm space-y-1">
+              <li>BOM compliance strategies</li>
+              <li>Lifecycle & obsolescence tracking</li>
+              <li>Sustainable sourcing</li>
+              <li>Total Cost of Ownership (TCO) insights</li>
+            </ul>
 
-</div>
+          </div>
+
+        </div>
+      </main>
+    </div>
           {/* Blog Cards */}
           <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (

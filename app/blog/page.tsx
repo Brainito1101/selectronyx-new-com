@@ -18,38 +18,31 @@ export default function BlogPage() {
       <main className="flex-1 bg-secondary">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           
-          {/* Page Header */}
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
-              Latest Insights
-            </h1>
 
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-  Stay informed with the Selectronyx Blog, covering electronics compliance, BOM management, and component lifecycle insights. Learn to manage RoHS and REACH requirements, track obsolescence, and make smarter hardware decisions.
-            </p>
-          </div>
+         {/* Page Header */}
+<div className="mx-auto max-w-2xl text-center">
+  <h1 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
+    Latest Insights
+  </h1>
 
-          {/* ✅ ADD THIS SEO CONTENT */}
-          <div className="mt-8 max-w-3xl mx-auto text-left">
+  <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+    Explore the Selectronyx Blog for insights on electronics compliance, BOM management, and component lifecycle.
+  </p>
+</div>
 
-  <p className="mb-4 text-muted-foreground">
-    The <strong>Selectronyx Blog</strong> shares insights on electronics compliance, BOM management, and component lifecycle risks. Learn how to handle regulations like RoHS and REACH while improving hardware decision-making.
+{/* ✅ SHORT SEO CONTENT */}
+<div className="mt-6 max-w-2xl mx-auto text-left">
+
+  <p className="mb-3 text-muted-foreground text-sm">
+    Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.
   </p>
 
-  <h2 className="text-lg font-semibold mt-6 mb-2">
-    What You’ll Learn
-  </h2>
-
-  <ul className="list-disc pl-6 mb-4 text-muted-foreground">
-    <li>BOM compliance and regulatory strategies</li>
-    <li>Component obsolescence and lifecycle tracking</li>
-    <li>Sustainable and reliable electronics sourcing</li>
-    <li>Total Cost of Ownership (TCO) insights</li>
+  <ul className="list-disc pl-5 mb-4 text-muted-foreground text-sm">
+    <li>BOM compliance strategies</li>
+    <li>Lifecycle & obsolescence tracking</li>
+    <li>Sustainable sourcing</li>
+    <li>TCO insights</li>
   </ul>
-
-  <p className="mb-6 text-muted-foreground">
-    Selectronyx helps teams reduce risk, ensure compliance, and build smarter, data-driven procurement strategies.
-  </p>
 
 </div>
 

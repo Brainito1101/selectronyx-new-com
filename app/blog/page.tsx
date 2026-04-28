@@ -31,37 +31,28 @@ export default function BlogPage() {
           </div>
 
           {/* ✅ ADD THIS SEO CONTENT */}
-          <div className="mx-auto mt-10 max-w-3xl text-muted-foreground text-sm leading-relaxed">
-            
-            <p className="mb-4">
-              The Selectronyx Blog is designed to help organizations understand and manage the growing complexity of electronics compliance and supply chain risk. With increasing regulatory pressure and rapid component lifecycle changes, businesses need a structured approach to BOM intelligence and procurement decision-making.
-            </p>
+          <div className="mt-8 max-w-3xl mx-auto text-left">
 
-            <p className="mb-4">
-              Selectronyx enables teams to monitor compliance with global standards such as RoHS and REACH, track component obsolescence, and evaluate electronic components based on sustainability, reliability, and total cost of ownership (TCO). These insights help reduce risk, improve transparency, and support long-term strategic planning.
-            </p>
+  <p className="mb-4 text-muted-foreground">
+    The <strong>Selectronyx Blog</strong> shares insights on electronics compliance, BOM management, and component lifecycle risks. Learn how to handle regulations like RoHS and REACH while improving hardware decision-making.
+  </p>
 
-            <h2 className="text-base font-semibold mt-6 mb-2">
-              What You’ll Learn
-            </h2>
+  <h2 className="text-lg font-semibold mt-6 mb-2">
+    What You’ll Learn
+  </h2>
 
-            <ul className="list-disc pl-6 mb-4">
-              <li>BOM compliance strategies aligned with global regulations</li>
-              <li>Component lifecycle management and obsolescence tracking</li>
-              <li>Evaluating electronic components for sustainability and performance</li>
-              <li>Understanding Total Cost of Ownership (TCO) in hardware decisions</li>
-              <li>Reducing risks in global electronics supply chains</li>
-            </ul>
+  <ul className="list-disc pl-6 mb-4 text-muted-foreground">
+    <li>BOM compliance and regulatory strategies</li>
+    <li>Component obsolescence and lifecycle tracking</li>
+    <li>Sustainable and reliable electronics sourcing</li>
+    <li>Total Cost of Ownership (TCO) insights</li>
+  </ul>
 
-            <h2 className="text-base font-semibold mt-6 mb-2">
-              Why Selectronyx
-            </h2>
+  <p className="mb-6 text-muted-foreground">
+    Selectronyx helps teams reduce risk, ensure compliance, and build smarter, data-driven procurement strategies.
+  </p>
 
-            <p className="mb-6">
-              Selectronyx combines compliance intelligence, supplier insights, and lifecycle data into a single platform, helping organizations make informed decisions with confidence. By integrating risk analysis and sustainability metrics, Selectronyx supports the development of more resilient and compliant electronics ecosystems.
-            </p>
-
-          </div>
+</div>
 
           {/* Blog Cards */}
           <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">

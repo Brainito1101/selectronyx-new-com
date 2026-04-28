@@ -56,6 +56,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+       <head>
+        <meta
+          name="google-site-verification"
+          content="oSj5HE1ReWYkjbVINUjKLdL1BB0LeDzKYkoI_7zEDvU"
+        />
+      </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         <DeferredAnalytics />
 

@@ -37,7 +37,7 @@ export default function BlogPage() {
     Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.
   </p>
 
-  <ul className="list-disc list-inside text-center mx-auto w-fit mb-4 text-muted-foreground text-sm">
+  <ul className="list-disc list-inside text-center mb-4 text-muted-foreground text-sm">
   <li>BOM compliance strategies</li>
   <li>Lifecycle & obsolescence tracking</li>
   <li>Sustainable sourcing</li>

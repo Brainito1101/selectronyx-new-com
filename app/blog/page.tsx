@@ -31,21 +31,21 @@ export default function BlogPage() {
 </div>
 
 {/* ✅ SHORT SEO CONTENT */}
-<div className="mt-6 max-w-2xl mx-auto text-left">
+<div className="mt-6 max-w-2xl mx-auto text-center">
 
   <p className="mb-3 text-muted-foreground text-sm">
     Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.
   </p>
 
-  <ul className="list-disc list-inside text-center mb-4 text-muted-foreground text-sm">
-  <li>BOM compliance strategies</li>
-  <li>Lifecycle & obsolescence tracking</li>
-  <li>Sustainable sourcing</li>
-  <li>TCO insights</li>
-</ul>
+  {/* ✅ FIXED LIST */}
+  <ul className="list-disc list-inside text-left mx-auto w-fit text-muted-foreground text-sm space-y-1">
+    <li>BOM compliance strategies</li>
+    <li>Lifecycle & obsolescence tracking</li>
+    <li>Sustainable sourcing</li>
+    <li>TCO insights</li>
+  </ul>
 
 </div>
-
           {/* Blog Cards */}
           <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (

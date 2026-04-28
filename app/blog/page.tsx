@@ -21,31 +21,47 @@ export default function BlogPage() {
 
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
 
-          {/* Page Header */}
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
-              Latest Insights
-            </h1>
+         {/* Page Header */}
+<div className="mx-auto max-w-2xl text-center">
+  <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
+    Latest Insights
+  </h1>
 
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Explore the Selectronyx Blog for insights on electronics compliance, BOM management, and component lifecycle.
-            </p>
-          </div>
+  <p className="mt-4 text-base text-muted-foreground">
+    Explore the Selectronyx Blog for insights on electronics compliance, BOM management, and component lifecycle.
+  </p>
 
-          {/* Short SEO Content */}
-          <div className="mt-6 max-w-2xl mx-auto text-left">
-            <p className="mb-3 text-muted-foreground text-sm">
-              Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.
-            </p>
+  <p className="mt-2 text-base text-muted-foreground">
+    Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.
+  </p>
+</div>
 
-            <ul className="list-disc pl-5 mb-4 text-muted-foreground text-sm">
-              <li>BOM compliance strategies</li>
-              <li>Lifecycle & obsolescence tracking</li>
-              <li>Sustainable sourcing</li>
-              <li>TCO insights</li>
-            </ul>
-          </div>
+{/* ✅ FIXED CONTENT BLOCK */}
+<div className="mt-8 max-w-xl mx-auto">
 
+  <ul className="space-y-2 text-sm text-muted-foreground">
+    <li className="flex items-start gap-2">
+      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+      BOM compliance strategies
+    </li>
+
+    <li className="flex items-start gap-2">
+      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+      Lifecycle & obsolescence tracking
+    </li>
+
+    <li className="flex items-start gap-2">
+      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+      Sustainable sourcing
+    </li>
+
+    <li className="flex items-start gap-2">
+      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
+      TCO insights
+    </li>
+  </ul>
+
+</div>
           {/* Blog Cards */}
           <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (

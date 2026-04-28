@@ -21,6 +21,7 @@ export default function BlogPage() {
 
          {/* Page Header */}
 <div className="mx-auto max-w-2xl text-center">
+
   <h1 className="text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
     Latest Insights
   </h1>
@@ -28,10 +29,12 @@ export default function BlogPage() {
   <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
     Explore the Selectronyx Blog for insights on electronics compliance, BOM management, and component lifecycle.
   </p>
-</div>
 
-{/* ✅ SHORT SEO CONTENT */}
-<div className="mt-6 max-w-2xl mx-auto text-center">
+  <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+    Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.
+  </p>
+
+</div>
 
   <p className="mb-3 text-muted-foreground text-sm">
     Learn how to manage RoHS and REACH, track component obsolescence, and improve hardware decisions.

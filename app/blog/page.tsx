@@ -24,9 +24,8 @@ export default function BlogPage() {
               Latest Insights
             </h1>
 
-            {/* ✅ UPDATED PARAGRAPH */}
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Stay informed with the Selectronyx Blog, where we share expert insights on electronics compliance, BOM (Bill of Materials) management, and component lifecycle intelligence. Learn how to navigate global regulations like RoHS and REACH, track component obsolescence, and make smarter, data-driven decisions for sustainable and efficient hardware procurement.
+  Stay informed with the Selectronyx Blog, covering electronics compliance, BOM management, and component lifecycle insights. Learn to manage RoHS and REACH requirements, track obsolescence, and make smarter hardware decisions.
             </p>
           </div>
 

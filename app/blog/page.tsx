@@ -45,17 +45,7 @@ export default function BlogPage() {
 
 </div>
 
-{/* ✅ BLOG CARDS SECTION */}
-<div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2 lg:grid-cols-3">
-  {/* your blog cards here */}
 
-  {/* Example card (optional remove later) */}
-  <div className="p-4 bg-white rounded-xl shadow">
-    <h3 className="font-semibold text-lg">Sample Blog Title</h3>
-    <p className="text-sm text-muted-foreground mt-2">
-      Short description of your blog post goes here.
-    </p>
-  </div>
 
 </div>
           {/* Blog Cards */}
